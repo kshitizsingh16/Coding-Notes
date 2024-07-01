@@ -1,0 +1,20 @@
+Git Commands-->
+
+1. To initialize empty git repository in our working directory, we use "git init" command.
+2. To track the changes made in the files of working directory, we need to add those files in which we want to track changes in our staging area.
+3. Staging area is used because sometimes we don't want to track all the files of working directory, so staging area contains only those files in which we want to track the changes.
+4. To find the files present in our staging area, we use "git status" command.
+5. To add the files in the staging area we use git command "git add file_name" or if we want to add all the files then we use "git add ." command.
+6. To commit the files present in the staging area to our local repository , we use "git commit -m"Commit message (usually in present tense)".
+7. To find the files committed in our local repository, we use "git log" command.
+8. To track the changes made in the file of working directory and to the file present in the local repository , we use "git diff filename" command.
+9. To restore the previous version of our file from our local repository , we use "git checkout filename" command.
+10. To add remote repository , we use "git remote add origin(remote repository name) url(remote repository url)" command.
+11. To push local repository to remote repository , we use "git push -u origin master".
+12. Local repository is pushed to the remote repository using "-u".
+13. Master branch is the main branch or default branch of all our commits.
+14. .gitignore is used to prevent files from getting pushed to our git repositories. In .gitignore file , we simply just write the name of the files we want to ingore in new lines.
+and we use"#" to write comments in gitignore and to put multiple files with same extension we use"*.fileextension" eg.(*.txt) will ignore all the text files of our working directory. Only those files will be added to our staging area which will not be present in our gitignore file.
+15. Git clone is used to download remote repositories to our local device. To clone a remote repository we use "git clone url of remote repository(url copied from clone or download option of our remote repository".We can also use git log in our cloned project to find all the commits done in that repository.
+16. New branch is created by using "git branch branch_name" command and we can switch between branches by using "git checkout branch_name" command, and to find the number of branches present we can use "git branch" command.
+17. Forking is used to copy a remote repository to our git repository and then make changes to the code if we want any and then making a pull request to the original repository , so that they can merge it in their code if they want to.

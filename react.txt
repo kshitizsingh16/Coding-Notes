@@ -1,0 +1,89 @@
+REACT -->
+
+--> React is a library which we incorporate in our project to make it better. It is a JavaScript library which provides us various functionality which we can use.
+React elements are nothing but  JavaScript object.
+
+--> Bundlers-- vite,webpack,parcel,etc. Bundler is a tool that puts our code and all its dependencies together in one JavaScript file.Also it imporves websites performance and reduces file sizes. The Bundler we are using in our code is parcel.
+
+--> dev-dependencies are the packages which we need in our development environment.
+
+--> package-lock.jason is a very important file. It locks the version of the package which we have used while building up website. We should never keep it in gitignore.It makes sure that what version of package running on our development environment, same will  run on our server.
+
+--> We do not to put node modules on git. We can generate the whole node modules if we have package-lock.jason file in our project.
+
+--> when we write "npx parcel entry_point_name". it creates a development build of our project and hosts it on the server. To create production build we use "npx  parcel build entry_point_name". parcel will build all the production files in the dist folder.
+
+--> Parcel with the help of Hot Module Reloading and File Watcher Algorithm(it is written in C++) keeps tracks of what changes we made in our code and then simply update those changes without the need of refreshing the whole page. HOT MODULE REPLACEMENT(HMR) is a feature that allows developers to update modules within a running application without needing to fully refresh the page.
+
+--> parcel-cache is a file used by parcel to do all the processes which we need in our web dev.
+
+--> dist folder keeps the files minified for us.
+
+-->parcel does bundling,minificaton,cleans our code, development and production build, image optimization and parcel does caching while development. it compresses our files also. It is compatible with the older version of browsers. It gives us functionality that we can build our app on https. It uses consistent hashing algorithm to do all works. It is a zero config bundler means that we do not need to write many things we just write "npx parcle entry_point_file" it will perform doing lot of tasks simultaneously,
+
+-->  We should put parcel-cache in our gitignore because it can be generated on the server.
+
+--> Transitive dependencies -- A transitive dependency is one not imported directly into the project at hand, but instead imported by a direct dependency or another transitive dependency. In simple words we can say that dependencies on which our direct dependencies depend.
+
+--> browserlist helps us to make our app compatible with lot of browsers.
+
+--> Pollyfill means a given code can be converted into some other code but performs the same operation .It is done so that sometimes older versions of browser are not able to understand updated syntax of codes so we need to convert them into their older versions so that they can understand it.
+
+--> Tree-shaking means removing unwanted code from our project.
+
+--> npx is used when we want to execute out code without downloading the pakages while npm command is used when we want our packages to be installed in our project.
+
+--> babel-plugin-transform-remove-console is used to remove console.log() from our project
+
+--> bebel is a just a javascript package which reads our code and converts it into another form, so that browsers can understand it.
+
+--> Render means updating something in the DOM.
+
+--> We need to provide keys in case of multiple elements because then react will not need to modify the whole dom , instead it will identify the new element and modify only according to that. This increases the efficiency of the project.We should never assign same keys for two elements.
+
+--> key and id are two different things , they are not related to each other.
+
+--> react.createElement create gives us object, which is converted into html by react.
+
+--> JSX is not HTML inside JavaScript, JSX is HTML like syntax but it is not HTML. JSX is build by Facebook Developers.bebel executes our JSX code. JSX uses react.createElement which then gives us object and then it get converted into HTML by react. bebel converts the JSX into react.createElement.JSX is not a package, it's a expression.
+
+--> JSX is developer-friendly,increases readability, less code and it is good to maintain.
+
+--> React Component-- There are two types of components in react-->
+                         (i) Functional Component- It is the NEW way of writing our code.
+                         (ii) Class Based Component- It is the OLD way of writing our code.
+
+--> Functional Component is nothing but a javascript function that returns some piece of JSX code or a react element or composition of react element or a component.
+Name of component starts with a capital letter, it's not mandatory,it's a normal convention of writing our code.
+
+--> We can use our react element inside our functional component by writing it inside the curly braces in the functional component.
+
+--> We can also use our functional component inside another functional component by writing it like <Title /> or {Title()} inside the other functional component.
+
+--> We can write any piece of JavaScript code in curly braces  while writing JSX code.
+
+--> JSX is very secure , it first sanitizes the javascript code we provide in it , it checks whether this code is safe to execute or not, if code is not safe it will not execute it.
+
+-->  Component composition -- If we use component inside a component, then it is known as component composition or composing components.
+
+-->  Major difference between between babel and polyfill is that babel is a compiler which generates polyfill code for us.
+
+--> In JSX we can write comments in curly parenthesis.
+
+--> JSX can always have only one parent element.
+
+--> React.fragment is a component exported by the react module . React.fragment is like an empty tag which is used while writing JSX code in order to avoid unnecessary div tags as we know that JSX can only have one parent element , so one way of writing more than one tags is to use div tag but sometimes div tags are not useful and create problems in our code or make it a little bit complex to manage that's why we use react.fragment in place of div which acts as an empty and tells JSX that our code is starting from that.
+
+--> Instead of writing <React.Fragment> we can also write emty tags in place of this <></>.
+
+--> Config driven ui-- In a configuration-driven UI, the layout, styles, and other properties of UI elements are defined in a configuration file or database, which can be easily modified without requiring changes to the codebase.
+
+--> Optional Chaining (?.)  -- The optional chaining (?.) operator accesses an object's property or calls a function. If the object accessed or function called using this operator is undefined or null, the expression short circuits and evaluates to undefined instead of throwing an error.
+
+--> props -- props means passing some data or properties into our functional components.
+
+--> Reconciliation -- It uses an algorithm which react uses to diff one tree from another and it determines what needs to be updated and just re-render that small portion instead of re-rendering the whole app.
+
+--> Virtual DOM -- It is the representation of our actual DOM . Virtual DOM is used for reconciliation in react.
+
+--> never use index as a key in map . In case , we have no unique id which we can use as a key, then (no key(not acceptable) <<<<<<<< index key(last option) <<< unique key(best practice) ) we should follow this order for assigning keys.
