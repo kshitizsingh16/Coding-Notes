@@ -87,3 +87,25 @@ Name of component starts with a capital letter, it's not mandatory,it's a normal
 --> Virtual DOM -- It is the representation of our actual DOM . Virtual DOM is used for reconciliation in react.
 
 --> never use index as a key in map . In case , we have no unique id which we can use as a key, then (no key(not acceptable) <<<<<<<< index key(last option) <<< unique key(best practice) ) we should follow this order for assigning keys.
+
+--> with export default we can only export one item at a time. When we import this , it is known as default import and done by "import Filename from "src_folder".
+
+--> with direct import we can export every file we want to export. When we import this, it is known as named import and done by "import {filename} from "src_folder".
+
+ --> in order to import more than one file, we can use "import * as "name" from "src_folder" ".
+
+--> in config.js file we put all the hard coded data of our app.
+
+--> react uses one way of data binding , it means that we need to bind our data to a variable and then we can modify the value of variable  while writing . We can not directly insert value , we have to use a variable and then modify the value of that variable.
+
+--> whenever we have to change a variable inside react then local variables are not preferred, we need to use a react kind of variable.
+
+--> Every component in react maintains a state , so we can put some variables onto that state and every time we have to create a local variable , we use state in it.
+
+-- State -- In React, state is a built-in object that allows components to store data that may change over time. When the state object changes, the component re-renders, updating the UI to reflect the new data.
+
+--> Hook -- Hooks are nothing but just a normal function  but every hook has a specific function(tasks) associated with it.
+
+--> useState() hook is used to create a local state variable in react. useState returns an array , first element is variable and second element is setfunction. 
+
+--> Why do we need statevariables-- since react cannot keep track of normal javasript variable's changes, so we need to create local state variables which is tracked by react and any changes made in it , react will keep track of those changes and then it re-render the dom.
