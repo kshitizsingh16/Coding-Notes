@@ -151,3 +151,17 @@ Name of component starts with a capital letter, it's not mandatory,it's a normal
 -->this.props is used for accesing the props inside the class component.
 
 --> state variables are created inside a constructor in class based components.
+
+--> we do not mutate state directly in class based component like (this.state=something), it is not correct.
+
+-->  in case of a class based component , first constructor is called then render is called.
+
+--> in case of a class based component first constructor is called , then component renders and after that componentDidMount is called, so the best way of making an api call is to call it in componentDidMount.
+
+--> When rendering happens in react, react does it in two phases--first is render phase and then second phase is commit phase. In render phase constructor and render is called and in commit phase componentDidMount is called and updation of DOM happens in this phase.
+
+--> in class based component life cycle methods are as -- constructor() -> render() -> componentDidMount() -> componentDidUpdate()(it will be called after every render) -> componentWillUnmount()(it will be called to clear up the intervals which will still run behind).
+
+--> componentWillUnmount() is called to clear the mess we get created after changing the component and going to other component.
+
+--> in case of functional component, in useEffect we return a function which will be called whenever we change our component and clear the unwanted process going in background.
