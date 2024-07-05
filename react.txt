@@ -109,3 +109,45 @@ Name of component starts with a capital letter, it's not mandatory,it's a normal
 --> useState() hook is used to create a local state variable in react. useState returns an array , first element is variable and second element is setfunction. 
 
 --> Why do we need statevariables-- since react cannot keep track of normal javasript variable's changes, so we need to create local state variables which is tracked by react and any changes made in it , react will keep track of those changes and then it re-render the dom.
+
+--> React is fast because of it's faster DOM manipulation with the help of powerful diff algorithm.
+
+--> Monolith -- When all the things like apis,sms,ui are present in one project only, this architecture is known as monolith.
+
+--> Micro-services -- When there are no. of different projects for every thing required in our project, then such type of architecture is known as micro-services. This type of architecture is used in most of the big companies. In this case all these different projects are deployed on different ports but with same domain name or sometimes with different domain names and they can call each other with the urls.
+
+-->  useEffect()-- useEffect() is a hook which is called after every initial  render only once if it has no dependency. useEffect takes two inputs, first is a callback function and second one is a dependency array .If there is a dependency present then useEffect will be called every time that dependency gets updated. It is used for calling apis etc.
+
+--> Shimmer Ui is rendered with the help of conditional rendering.
+
+--> We can run only JavaScript expressions inside JSX in curly braces. We cannot run JavaScript statements inside JSX.
+
+--> If we don't pass anything in use effect() i.e, a dependency array then it will be called after every render, and if we pass an empty dependency array it will be called only once after the initial render.
+
+--> Never create a component inside a component.
+
+--> Never write  useState() inside an if-else and for loop because react does not like inconsistencies, it should exactly know how many useState() variables will be created.
+
+--> createBrowserRouter is a function which helps us to create routing.
+
+--> useRouteError is used to show our users more information about the errors.
+
+--> Single Page Application--
+
+--> There are two types of routing -- (i) Client Side routing (ii) Server Side routing
+
+--> Server Side routing -- It is the way in which all pages come from our server.
+
+--> In our application(food-ordering-app) , we are doing client side routing.
+
+--> In react application , in place of anchor tag we use Link which is imported from React-router-dom.Link tag does not reload our whole page like anchor tag, it just puts up the (contents of) page we request.
+
+--> If we want to create a nested roue , we need to create a Outlet which is imported from react-router-dom. All the children will go into the Outlet according to the route.
+
+--> We can read a dynamic url with the help of useParams hook provided by react-router-dom.
+
+--> render() method is necessary and compulsory for a class component as it return the jsx and whatever this render() function will return it will be injected into the DOM.
+
+-->this.props is used for accesing the props inside the class component.
+
+--> state variables are created inside a constructor in class based components.
